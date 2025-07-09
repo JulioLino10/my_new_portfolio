@@ -14,15 +14,20 @@
     <div class="escopo-container">
         <header class="header">
             <body id="begin">
-  <!-- Botões de idioma -->
-<div style="position: fixed; top: 8px; right: 8px; z-index: 9999; display: flex; gap: 6px;">
-  <button onclick="mudarIdioma('pt')" style="padding: 4px 8px;">🇧🇷</button>
-  <button onclick="mudarIdioma('en')" style="padding: 4px 8px;">🇺🇸</button>
+<!-- Toggle de idioma -->
+<div style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
+  <label style="display: flex; align-items: center; gap: 10px;">
+    🇧🇷
+    <input type="checkbox" id="toggleIdioma" onchange="trocarIdioma()" style="display: none;">
+    <span style="width: 50px; height: 25px; background: #ccc; border-radius: 20px; position: relative; display: inline-block;">
+      <span id="bolinha" style="width: 23px; height: 23px; background: white; border-radius: 50%; position: absolute; top: 1px; left: 1px; transition: 0.3s;"></span>
+    </span>
+    🇺🇸
+  </label>
 </div>
   <div class="escopo-container">
             <div class="nav-bar">
-                <h1 class="logo">Julio_Lino</h1>
-
+                <h1 class="logo">_LINO0Z_</h1>
                 <div class="nav-list">
                     <ul>
                         <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre mim</a></li>
@@ -31,19 +36,17 @@
                         <li class="nav-item"><a href="#main-five" class="nav-link">Contato</a></li>
                     </ul>
                 </div>
-
-                <div class="mobile-menu-icon">
+                    <div class="mobile-menu-icon">
                     <button id="btn-mobile">
                         <img class="icon" src="assets/img/menu_white_36dp.svg" alt="Abrir menu">
                     </button>
                 </div>
             </div>
         </header>
-
         <main class="main">
             <div class="apresentation">
                 <div class="title-main" data-aos="zoom-out-right" data-aos-duration="3000">
-                    <h2>Olá,<br>Meu nome<br>é Julio!</br></h2>
+                    <h2>Olá,<br>Meu nome<br>é Julio Lino!</br></h2>
                 </div>
                 <div class="section-right">
                     <div class="links-main-one" data-aos="zoom-in" data-aos-duration="1000">
@@ -184,11 +187,23 @@
 <script>
     AOS.init();
 </script>
-
-<!-- Tradução -->
 <script>
+function trocarIdioma() {
+  const toggle = document.getElementById('toggleIdioma');
+  const bolinha = document.getElementById('bolinha');
+
+  // Move a bolinha
+  if (toggle.checked) {
+    bolinha.style.left = "26px";
+    mudarIdioma('en');
+  } else {
+    bolinha.style.left = "1px";
+    mudarIdioma('pt');
+  }
+}
+
 function mudarIdioma(idioma) {
-  const traducoes = {
+  const t = {
     pt: {
       sobre: "Sobre mim",
       habilidades: "Habilidades",
@@ -257,46 +272,46 @@ function mudarIdioma(idioma) {
     }
   };
 
-  const t = traducoes[idioma];
+  const lang = t[idioma];
 
   // Navbar
-  document.querySelector('a[href="#sobre-mim"]').innerText = t.sobre;
-  document.querySelector('a[href="#hability"]').innerText = t.habilidades;
-  document.querySelector('a[href="#main-four"]').innerText = t.projetos;
-  document.querySelector('a[href="#main-five"]').innerText = t.contato;
+  document.querySelector('a[href="#sobre-mim"]').innerText = lang.sobre;
+  document.querySelector('a[href="#hability"]').innerText = lang.habilidades;
+  document.querySelector('a[href="#main-four"]').innerText = lang.projetos;
+  document.querySelector('a[href="#main-five"]').innerText = lang.contato;
 
-  // Saudação
-  document.querySelector('.title-main h2').innerHTML = t.saudacao;
-  document.querySelector('.links-main-one h3').innerText = t.estudante;
-  document.querySelector('.see-more').innerText = t.botaoProjetos;
+  // Apresentação
+  document.querySelector('.title-main h2').innerHTML = lang.saudacao;
+  document.querySelector('.links-main-one h3').innerText = lang.estudante;
+  document.querySelector('.see-more').innerText = lang.botaoProjetos;
 
   // Sobre mim
-  document.querySelector('#sobre-mim .title-sobre-mim h2').innerText = t.sobre;
+  document.querySelector('#sobre-mim .title-sobre-mim h2').innerText = lang.sobre;
   const textoSobre = document.querySelector('.title-main-two');
-  textoSobre.innerHTML = `<p>${t.sobreTexto1}</p><br><p>${t.sobreTexto2}</p><br><p>${t.sobreTexto3}</p>`;
+  textoSobre.innerHTML = `<p>${lang.sobreTexto1}</p><br><p>${lang.sobreTexto2}</p><br><p>${lang.sobreTexto3}</p>`;
 
-  // Habilidades
-  document.querySelector('#hability .main-three-title h4').innerText = t.skillsTitulo;
+  // Skills
+  document.querySelector('#hability .main-three-title h4').innerText = lang.skillsTitulo;
 
   // Projetos
-  document.querySelector('#main-four .project-title h2').innerText = t.projetos;
-  document.querySelector('#main-four .project-title p').innerHTML = t.projetosTexto;
-  document.querySelector('.title-p h3').innerText = t.projetoNome;
-  document.querySelector('.title-p p').innerHTML = t.projetoDesc;
-  document.querySelector('.git').innerText = t.gitLink;
+  document.querySelector('#main-four .project-title h2').innerText = lang.projetos;
+  document.querySelector('#main-four .project-title p').innerHTML = lang.projetosTexto;
+  document.querySelector('.title-p h3').innerText = lang.projetoNome;
+  document.querySelector('.title-p p').innerHTML = lang.projetoDesc;
+  document.querySelector('.git').innerText = lang.gitLink;
 
   // Contato
-  document.querySelector('#main-five .project-title h2').innerText = t.contato;
-  document.querySelector('#main-five .project-title p').innerText = t.contatoTexto;
-  document.querySelector('label[for="name"]').innerText = t.nome;
-  document.querySelector('label[for="email"]').innerText = t.email;
-  document.querySelector('label[for="message"]').innerText = t.mensagem;
-  document.querySelector('.btn-contact').innerText = t.enviar;
+  document.querySelector('#main-five .project-title h2').innerText = lang.contato;
+  document.querySelector('#main-five .project-title p').innerText = lang.contatoTexto;
+  document.querySelector('label[for="name"]').innerText = lang.nome;
+  document.querySelector('label[for="email"]').innerText = lang.email;
+  document.querySelector('label[for="message"]').innerText = lang.mensagem;
+  document.querySelector('.btn-contact').innerText = lang.enviar;
 
   // Footer
-  document.querySelector('footer .infos-title p').innerText = t.footerSobre;
-  document.querySelector('footer .infos-social h4').innerText = t.footerSocial;
-  document.querySelector('footer .copy p').innerHTML = t.copyright;
+  document.querySelector('footer .infos-title p').innerText = lang.footerSobre;
+  document.querySelector('footer .infos-social h4').innerText = lang.footerSocial;
+  document.querySelector('footer .copy p').innerHTML = lang.copyright;
 }
 </script>
 </body>

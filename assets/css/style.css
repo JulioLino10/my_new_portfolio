@@ -5,7 +5,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --font1: 'Ancizar Serif', serif;
     --font2: 'Karla', sans-serif;
@@ -46,7 +45,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 1rem 10rem;
 }
 
 header:hover {
@@ -606,7 +605,7 @@ footer {
     }
 
     .nav-list ul {
-        background: linear-gradient(to bottom, #000, #735efc);
+        background: linear-gradient(to bottom, #000, #ffffff);
         position: fixed;
         top: 0;
         right: 0;
