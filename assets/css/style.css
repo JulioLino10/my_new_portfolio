@@ -100,7 +100,7 @@ header .nav-list .nav-item .nav-link {
     padding-top: 70px;
     display: flex;
     align-items: center;
-    background: url(../img/b1.jpg);
+    background: url("assets/img/b1.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
