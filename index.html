@@ -8,144 +8,392 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Julio_Lino</title>
+    <title>Julio Lino - Desenvolvedor Full Stack</title>
+    <meta name="description" content="Portfólio de Julio Lino - Desenvolvedor especializado em Banco de Dados e automação com Python">
 </head>
 <body id="begin">
     <div class="escopo-container">
+        <!-- Partículas de fundo -->
+        <div class="particles" id="particles"></div>
+        
         <header class="header">
-            <body id="begin">
-  <div class="escopo-container">
             <div class="nav-bar">
-                <h1 class="logo">_LINO0Z_</h1>
+                <h1 class="logo floating">LINO0Z</span></h1>
                 <div class="nav-list">
                     <ul>
-                        <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre mim</a></li>
-                        <li class="nav-item"><a href="#hability" class="nav-link">Habilidades</a></li>
-                        <li class="nav-item"><a href="#main-four" class="nav-link">Projetos</a></li>
-                        <li class="nav-item"><a href="#main-five" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="#sobre-mim" class="nav-link" data-translate="nav-about">Sobre mim</a></li>
+                        <li class="nav-item"><a href="#hability" class="nav-link" data-translate="nav-skills">Habilidades</a></li>
+                        <li class="nav-item"><a href="#main-four" class="nav-link" data-translate="nav-projects">Projetos</a></li>
+                        <li class="nav-item"><a href="#main-five" class="nav-link" data-translate="nav-contact">Contato</a></li>
                     </ul>
                 </div>
+                <div class="header-controls">
+                    <div class="language-switcher">
+                        <button id="lang-toggle" class="lang-btn">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">PT</span>
+                        </button>
+                    </div>
                     <div class="mobile-menu-icon">
-                    <button id="btn-mobile">
-                        <img class="icon" src="assets/img/menu_white_36dp.svg" alt="Abrir menu">
-                    </button>
+                        <button id="btn-mobile">
+                            <img class="icon" src="assets/img/menu_white_36dp.svg" alt="Abrir menu">
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
+        
         <main class="main">
             <div class="apresentation">
                 <div class="title-main" data-aos="zoom-out-right" data-aos-duration="3000">
-                    <h2>Olá,<br>Meu nome<br>é Julio Lino!</br></h2>
+                    <h2 class="glitch" data-translate="hero-greeting">Olá,<br>Meu nome<br>é <span class="highlight-name rainbow-text">Julio Lino</span>!</h2>
+                    <div class="typing-effect">
+                        <span class="typed-text"></span>
+                        <span class="cursor blink">&nbsp;</span>
+                    </div>
                 </div>
                 <div class="section-right">
                     <div class="links-main-one" data-aos="zoom-in" data-aos-duration="1000">
-                        <h3>Estudante de Ciencia da Computação</h3>
-                        <a href="https://github.com/JulioLino10"><i class="fa-brands fa-github" data-aos="fade-up"
-                                data-aos-duration="5000"></i></a>
-                        <a href="https://www.instagram.com/_lino0z_/"><i class="fa-brands fa-instagram"
-                                data-aos="fade-up" data-aos-duration="1000"></i></a>
-                        <a href="https://www.linkedin.com/in/julio-lino-58a7a2284/"><i class="fa-brands fa-linkedin-in"
-                                data-aos="fade-up" data-aos-duration="700"></i></a>
+                        <h3 class="fade-in-up" data-translate="hero-subtitle">Desenvolvedor & Estudante de Ciência da Computação</h3>
+                        <div class="social-links bounce-in">
+                            <a href="https://github.com/JulioLino10" class="social-link hover-glow" data-aos="fade-up" data-aos-duration="500">
+                                <i class="fa-brands fa-github rotate-on-hover"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.instagram.com/_lino0z_/" class="social-link hover-glow" data-aos="fade-up" data-aos-duration="700">
+                                <i class="fa-brands fa-instagram rotate-on-hover"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/julio-lino-58a7a2284/" class="social-link hover-glow" data-aos="fade-up" data-aos-duration="900">
+                                <i class="fa-brands fa-linkedin-in rotate-on-hover"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="btn" data-aos="zoom-in-left" data-aos-duration="2000">
-                        <button class="see-more">PROJETOS</button>
+                        <button class="see-more btn-animate">
+                            <span data-translate="btn-projects">PROJETOS</span>
+                            <i class="fas fa-arrow-down bounce"></i>
+                        </button>
+                        <button class="download-cv btn-animate">
+                            <span data-translate="btn-cv">DOWNLOAD CV</span>
+                            <i class="fas fa-download shake"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </main>
         <section class="background" id="sobre-mim">
             <div class="title-sobre-mim">
-                <h2>Sobre mim</h2>
-                <div class="line"></div>
+                <h2 class="section-title-animated" data-translate="about-title">Sobre mim</h2>
+                <div class="line animated-line"></div>
             </div>
             <main class="main-two">
                 <div class="image-profile-wrapper">
-                    <img src="assets/img/ft1.png" alt="Foto de perfil de Julio Lino" class="image-profile" data-aos="zoom-in-right"
-                        data-aos-duration="2000">
+                    <div class="profile-card floating-card" data-aos="zoom-in-right" data-aos-duration="2000">
+                        <img src="assets/img/ft1.png" alt="Foto de perfil de Julio Lino" class="image-profile hover-zoom">
+                        <div class="profile-overlay slide-up">
+                            <div class="profile-stats">
+                                <div class="stat">
+                                    <span class="stat-number counter-animation" data-count="5">0</span>
+                                    <span class="stat-label" data-translate="stat-projects">Projetos</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number counter-animation" data-count="2">0</span>
+                                    <span class="stat-label" data-translate="stat-years">Anos Estudando</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="title-main-two" data-aos="zoom-out-down" data-aos-duration="1000">
-                     <p>Sou um <b>desenvolvedor com foco em Banco de Dados</b> e estudante de Ciência da Computação.  
-                    Crio, estruturo e gerencio sistemas de dados, sites e aplicações web — sempre com propósito e precisão.  
-                    Tenho experiência em <b>automação de processos com Python</b>, transformando tarefas repetitivas em rotinas inteligentes.  
-                    Meu código é ferramenta e arte: resolve, organiza e impulsiona.  
-                    Confira alguns dos meus trabalhos na sessão abaixo.
-                        <b>Projetos</b>.
-                    </p>
-                    <br>
-                    <p>Também curto compartilhar meus aprendizados ao longo da jornada com programação e tecnologia,  
-                    sempre buscando ajudar, trocar ideias e fortalecer a conexão com a comunidade de desenvolvedores.  
-                    Se quiser acompanhar esse caminho mais de perto, me segue lá no  
-                    <a href="https://www.instagram.com/_lino0z_/">Instagram</a> e confere o conteúdo que venho criando sobre o universo da TI.
-                    </p>
+                    <div class="about-content">
+                        <div class="about-text text-reveal">
+                            <p data-translate="about-p1">Sou um <b>desenvolvedor com foco em Banco de Dados</b> e estudante de Ciência da Computação.  
+                            Crio, estruturo e gerencio sistemas de dados, sites e aplicações web — sempre com propósito e precisão.  
+                            Tenho experiência em <b>automação de processos com Python</b>, transformando tarefas repetitivas em rotinas inteligentes.</p>
+                            
+                            <div class="highlight-box card-hover">
+                                <i class="fas fa-code icon-spin"></i>
+                                <p data-translate="about-highlight">Meu código é ferramenta e arte: resolve, organiza e impulsiona.</p>
+                            </div>
 
-                    <br>
-                    <p>Estou aberto a oportunidades de <b>emprego</b> nas quais eu possa contribuir,
-                        aprender e crescer. Se você tiver uma boa oportunidade que corresponda
-                        às minhas habilidades e experiência, não hesite em <b>entrar em contato</b>.</p>
+                            <p data-translate="about-p2">Também curto compartilhar meus aprendizados ao longo da jornada com programação e tecnologia,  
+                            sempre buscando ajudar, trocar ideias e fortalecer a conexão com a comunidade de desenvolvedores.  
+                            Se quiser acompanhar esse caminho mais de perto, me segue lá no  
+                            <a href="https://www.instagram.com/_lino0z_/" class="instagram-link glow-link">Instagram</a> e confere o conteúdo que venho criando sobre o universo da TI.</p>
+
+                            <div class="cta-box card-hover">
+                                <i class="fas fa-briefcase icon-bounce"></i>
+                                <p data-translate="about-cta">Estou aberto a oportunidades de <b>emprego</b> nas quais eu possa contribuir,
+                                    aprender e crescer. Se você tiver uma boa oportunidade que corresponda
+                                    às minhas habilidades e experiência, não hesite em <b>entrar em contato</b>.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </section>
         <section class="back-two" id="hability">
             <main class="main-three">
                 <div class="main-three-title">
-                    <h4>Skills e habilidades</h4>
-                    <div class="line"></div>
+                    <h4 class="section-title-animated" data-translate="skills-title">Skills e Habilidades</h4>
+                    <div class="line animated-line"></div>
+                    <p class="fade-in-up" data-translate="skills-subtitle">Tecnologias que domino e utilizo em meus projetos</p>
                 </div>
 
-                <div class="skills">
-                    <ul class="list-of-skills" data-aos="fade-up" data-aos-duration="3000">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Java</li>
-                        <li>MySql</li>
-                        <li>GitHub</li>
-                    </ul>
+                <div class="skills-container">
+                    <div class="skills-category card-float" data-aos="fade-up" data-aos-duration="1000">
+                        <h5 class="category-title-glow"><i class="fas fa-code icon-rotate"></i> <span data-translate="frontend">Frontend</span></h5>
+                        <div class="skills-grid">
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-html5 skill-icon-bounce"></i>
+                                <span>HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-css3-alt skill-icon-bounce"></i>
+                                <span>CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-js-square skill-icon-bounce"></i>
+                                <span>JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category card-float" data-aos="fade-up" data-aos-duration="1200">
+                        <h5 class="category-title-glow"><i class="fas fa-server icon-rotate"></i> <span data-translate="backend">Backend & Database</span></h5>
+                        <div class="skills-grid">
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-java skill-icon-bounce"></i>
+                                <span>Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-python skill-icon-bounce"></i>
+                                <span>Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-hover">
+                                <i class="fas fa-database skill-icon-bounce"></i>
+                                <span>MySQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="90"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category card-float" data-aos="fade-up" data-aos-duration="1400">
+                        <h5 class="category-title-glow"><i class="fas fa-tools icon-rotate"></i> <span data-translate="tools">Ferramentas</span></h5>
+                        <div class="skills-grid">
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-git-alt skill-icon-bounce"></i>
+                                <span>Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-hover">
+                                <i class="fab fa-github skill-icon-bounce"></i>
+                                <span>GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item skill-hover">
+                                <i class="fas fa-robot skill-icon-bounce"></i>
+                                <span data-translate="automation">Automação</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress skill-glow" data-progress="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </section>
         <main class="main-four" id="main-four">
             <div class="project-title">
-                <h2>Projetos</h2>
-                <div class="line"></div>
-                <p>Abaixo você encontrará alguns dos meus projetos pessoais e de estudo.
+                <h2 class="section-title-animated" data-translate="projects-title">Projetos</h2>
+                <div class="line animated-line"></div>
+                <p class="fade-in-up" data-translate="projects-subtitle">Abaixo você encontrará alguns dos meus projetos pessoais e de estudo.
                     Mais projetos estão disponíveis em meu <a href="https://github.com/JulioLino10">GitHub</a>
                 </p>
             </div>
-            <div class="box-project" data-aos="fade-up" data-aos-duration="3000">
-                <div class="img-anime" data-aos="zoom-in-left" data-aos-duration="32000">
-                    <img src="assets\img\b3.png" alt="projeto um" class="project-img"
-                        data-link="https://github.com/JulioLino10/automatiza-o_com_python">
+            
+            <div class="projects-grid">
+                <div class="project-card project-hover-effect" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="project-image">
+                        <img src="assets\img\b3.png" alt="projeto automação" class="project-img image-zoom"
+                            data-link="https://github.com/JulioLino10/automatiza-o_com_python">
+                        <div class="project-overlay slide-in-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/JulioLino10/automatiza-o_com_python" class="project-link icon-bounce-hover">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link icon-bounce-hover">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags tags-animate">
+                            <span class="tag tag-glow">Python</span>
+                            <span class="tag tag-glow" data-translate="tag-automation">Automação</span>
+                            <span class="tag tag-glow">PDF</span>
+                            <span class="tag tag-glow">Google Sheets</span>
+                        </div>
+                        <h3 class="project-title-glow" data-translate="project1-title">🧩 Automação de Forecast Comercial</h3>
+                        <p class="text-reveal" data-translate="project1-desc">Sistema desenvolvido em Python para otimizar o preenchimento de forecasts comerciais. Extrai dados de propostas em PDF e envia automaticamente para Google Sheets, eliminando tarefas repetitivas e reduzindo erros manuais.</p>
+                        <div class="project-footer">
+                            <span class="project-year">2024</span>
+                            <a href="https://github.com/JulioLino10/automatiza-o_com_python" class="git-link link-glow">
+                                <i class="fab fa-github icon-spin-hover"></i>
+                                <span data-translate="repository">Repositório</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="title-p">
-                    <h3>🧩 Projeto: Automação de Forecast Comercial</h3>
-                    <p>Desenvolvi uma automação em Python para otimizar o preenchimento de forecasts comerciais a partir de propostas em PDF. O sistema extrai dados como nome da empresa, contato, telefone, e-mail, valor total e vendedor, e envia automaticamente para uma planilha compartilhada no Google Sheets. O objetivo foi eliminar tarefas repetitivas do time comercial, ganhar tempo e reduzir erros manuais.
-                    A estrutura conta com leitura via PyMuPDF, integração com Google Sheets API e tratamento dinâmico dos campos.</b></p>
-                    <a href="https://github.com/JulioLino10/automatiza-o_com_python" class="git">Repositório GitHub</a>
+
+                <!-- Placeholder para projetos futuros -->
+                <div class="project-card coming-soon project-hover-effect" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="project-image">
+                        <div class="coming-soon-content">
+                            <i class="fas fa-code icon-pulse"></i>
+                            <h4 data-translate="next-project">Próximo Projeto</h4>
+                            <p data-translate="in-development">Em desenvolvimento...</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags tags-animate">
+                            <span class="tag tag-glow">JavaScript</span>
+                            <span class="tag tag-glow">React</span>
+                        </div>
+                        <h3 class="project-title-glow" data-translate="project2-title">🚀 Sistema Web Moderno</h3>
+                        <p class="text-reveal" data-translate="project2-desc">Aplicação web completa em desenvolvimento utilizando tecnologias modernas para criar uma experiência única para o usuário.</p>
+                        <div class="project-footer">
+                            <span class="project-year">2025</span>
+                            <span class="status status-glow" data-translate="coming-soon">Em breve</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card coming-soon project-hover-effect" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="project-image">
+                        <div class="coming-soon-content">
+                            <i class="fas fa-database icon-pulse"></i>
+                            <h4 data-translate="database-system">Sistema de Banco de Dados</h4>
+                            <p data-translate="in-planning">Em planejamento...</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags tags-animate">
+                            <span class="tag tag-glow">MySQL</span>
+                            <span class="tag tag-glow">Java</span>
+                        </div>
+                        <h3 class="project-title-glow" data-translate="project3-title">📊 Gerenciador de Dados</h3>
+                        <p class="text-reveal" data-translate="project3-desc">Sistema robusto de gerenciamento de banco de dados com interface intuitiva e funcionalidades avançadas de análise.</p>
+                        <div class="project-footer">
+                            <span class="project-year">2025</span>
+                            <span class="status status-glow" data-translate="in-planning-status">Em planejamento</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </main>
         <main class="main-four" id="main-five">
             <div class="project-title">
-                <h2>Contato</h2>
-                <div class="line"></div>
-                <p>Sinta-se a vontade para entrar em contato comigo abaixo por E-mail e me enviar alguma mensagem.
-                </p>
+                <h2 class="section-title-animated" data-translate="contact-title">Contato</h2>
+                <div class="line animated-line"></div>
+                <p class="fade-in-up" data-translate="contact-subtitle">Sinta-se à vontade para entrar em contato comigo. Estou sempre aberto a novas oportunidades e colaborações.</p>
             </div>
-            <form class="contact-form" action="https://formspree.io/f/xpwrnbea" method="POST">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" required>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="contact-item card-hover">
+                        <div class="contact-icon icon-bounce">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-translate="email-label">Email</h4>
+                            <p>julio.lino107@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-hover">
+                        <div class="contact-icon icon-bounce">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-translate="location-label">Localização</h4>
+                            <p data-translate="brazil">Brasil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-hover">
+                        <div class="contact-icon icon-bounce">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-translate="availability-label">Disponibilidade</h4>
+                            <p data-translate="schedule">Seg - Sex: 9h às 18h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact card-hover">
+                        <h4 data-translate="social-label">Redes Sociais</h4>
+                        <div class="social-links-contact">
+                            <a href="https://github.com/JulioLino10" class="social-contact-link icon-hover-effect">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/julio-lino-58a7a2284/" class="social-contact-link icon-hover-effect">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/_lino0z_/" class="social-contact-link icon-hover-effect">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-contact">Enviar</button>
-            </form>
+                
+                <form class="contact-form form-animate" action="https://formspree.io/f/xpwrnbea" method="POST" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="form-group">
+                        <label for="name" data-translate="name-label">Nome</label>
+                        <input type="text" id="name" name="name" required class="input-glow">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-translate="email-form-label">Email</label>
+                        <input type="email" id="email" name="email" required class="input-glow">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-translate="subject-label">Assunto</label>
+                        <input type="text" id="subject" name="subject" required class="input-glow">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-translate="message-label">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required class="input-glow"></textarea>
+                    </div>
+                    <button type="submit" class="btn-contact btn-pulse">
+                        <span data-translate="send-message">Enviar Mensagem</span>
+                        <i class="fas fa-paper-plane icon-fly"></i>
+                    </button>
+                </form>
+            </div>
         </main>
         <footer>
             <div class="infos">
